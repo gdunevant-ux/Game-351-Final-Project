@@ -5,10 +5,15 @@ public class CarScript : MonoBehaviour
     public float moveSpeed = 15f;
     public float turnSpeed = 80f;
 
+    public bool canMove = false;
     public float tiltSpeed = 5f;
 
     void Update()
     {
+        if (!canMove)
+        {
+            return;
+        }
         float move = Input.GetAxis("Vertical");
         float turn = Input.GetAxis("Horizontal");
 
