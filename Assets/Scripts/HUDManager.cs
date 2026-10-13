@@ -10,14 +10,21 @@ public class HUDManager : MonoBehaviour
     public TextMeshProUGUI timerText;
 
     private float raceTime = 0f;
+    private float startDelay = 12f;
 
     void Update()
     {
-
         float speed = Input.GetAxis("Vertical") * car.moveSpeed;
         speedText.text = "Speed: " + Mathf.Abs(speed).ToString("0") + " MPH";
 
-        raceTime += Time.deltaTime;
+        if (startDelay > 0f)
+        {
+            startDelay -= Time.deltaTime;
+        }
+        else
+        {
+            raceTime += Time.deltaTime;
+        }
 
         int minutes = Mathf.FloorToInt(raceTime / 60);
         int seconds = Mathf.FloorToInt(raceTime % 60);
