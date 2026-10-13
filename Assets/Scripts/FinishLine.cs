@@ -1,16 +1,36 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class FinishLine : MonoBehaviour
 {
     public LapManager lapManager;
+    public float minimumLapTime = 20f;
+
+    private float lastLapTime;
+    private bool raceStarted = false;
+
+    void Start()
+    {
+        lastLapTime = Time.time;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (!other.CompareTag("Player"))
+            return;
+
+        if (!raceStarted)
         {
-            lapManager.CompleteLap();
+            raceStarted = true;
+            lastLapTime = Time.time;
+            Debug.Log("Player crossed the starting line.");
+            return;
         }
+
+        if (Time.time - lastLapTime < minimumLapTime)
+            return;
+
+        lastLapTime = Time.time;
+        lapManager.CompleteLap();
     }
 }
