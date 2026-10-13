@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6381824389850187002}
   - component: {fileID: 6381824389850187003}
   - component: {fileID: 6381824389850187000}
-  - component: {fileID: 6381824389850186996}
   - component: {fileID: 7816141606616023882}
   m_Layer: 0
   m_Name: SpeedPad
@@ -99,23 +98,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 10, z: 1}
   m_Center: {x: 0, y: 5, z: 0}
---- !u!114 &6381824389850186996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6381824389850187001}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12e2b45681fed0847aaa298a7b6f9abe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  multiplier: 1.5
-  duration: 2
-  boostAudio: {fileID: 7816141606616023882}
-  boostClip: {fileID: 8300000, guid: 9b8c7f8daf9380947972e796dbb7633c, type: 3}
-  boostVolume: 0.5
 --- !u!82 &7816141606616023882
 AudioSource:
   m_ObjectHideFlags: 0
@@ -126,7 +108,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9b8c7f8daf9380947972e796dbb7633c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 93f35ce04815b4d22a36afb67ba2438e, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5
   m_Pitch: 1
