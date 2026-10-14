@@ -10,7 +10,17 @@ public class HUDManager : MonoBehaviour
     public TextMeshProUGUI timerText;
 
     private float raceTime = 0f;
-    private float startDelay = 12f;
+    private float startDelay = 18f;
+
+    void Start()
+    {
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+
+        StartCoroutine(ShowHUD());
+    }
 
     void Update()
     {
@@ -32,5 +42,15 @@ public class HUDManager : MonoBehaviour
 
         timerText.text = string.Format("{0:00}:{1:00}.{2:00}",
             minutes, seconds, hundredths);
+    }
+
+    IEnumerator ShowHUD()
+    {
+        yield return new WaitForSeconds(startDelay);
+
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(true);
+        }
     }
 }
