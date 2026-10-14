@@ -118,7 +118,7 @@ public class AIWaypointDriver : MonoBehaviour
                 }
                 else
                 {
-                    // Return to the beginning for the next lap.
+                    
                     currentWaypoint = 0;
 
                     Debug.Log("AI starting lap 2!");
