@@ -7,58 +7,49 @@ public class MainMenuManager : MonoBehaviour
 {
     public GameObject mainMenuPanel;
     public GameObject hudManager;
-
     public CarScript playerCar;
-
     public PlayableDirector introTimeline;
-
-    public CinemachineVirtualCamera trackCam;
-    public CinemachineVirtualCamera thirdPersonCam;
 
     void Start()
     {
-        mainMenuPanel.SetActive(true);
-        hudManager.SetActive(false);
+        // Show the menu
+        if (mainMenuPanel != null)
+            mainMenuPanel.SetActive(true);
 
-        playerCar.enabled = false;
+        // Hide the HUD
+        if (hudManager != null)
+            hudManager.SetActive(false);
 
+        // Disable driving
+        if (playerCar != null)
+            playerCar.canMove = false;
+
+        // Pause the game
         Time.timeScale = 0f;
     }
 
     public void PlayGame()
     {
+        // Resume time
         Time.timeScale = 1f;
 
-        mainMenuPanel.SetActive(false);
+        // Hide the menu
+        if (mainMenuPanel != null)
+            mainMenuPanel.SetActive(false);
 
-        // Intro camera becomes active
-        trackCam.Priority = 20;
-        thirdPersonCam.Priority = 10;
+        // Play intro timeline
+        if (introTimeline != null)
+            introTimeline.Play();
 
-        introTimeline.Play();
-
-        StartCoroutine(WaitForIntro());
-    }
-
-    IEnumerator WaitForIntro()
-    {
-        yield return new WaitForSeconds((float)introTimeline.duration);
-
-        // Switch back to gameplay camera
-        trackCam.Priority = 10;
-        thirdPersonCam.Priority = 20;
-
-        playerCar.enabled = true;
-
-        hudManager.SetActive(true);
+        // Start background music
+        else
+        {
+            Debug.LogError("BackgroundMusic is not assigned in MainMenuManager!");
+        }
     }
 
     public void QuitGame()
     {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
         Application.Quit();
-#endif
     }
 }
