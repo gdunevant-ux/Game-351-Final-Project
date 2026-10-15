@@ -10,7 +10,7 @@ public class HUDManager : MonoBehaviour
     public TextMeshProUGUI timerText;
 
     private float raceTime = 0f;
-    private float startDelay = 18f;
+    private float startDelay = 6.5f;
 
     void Start()
     {
