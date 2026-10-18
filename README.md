@@ -44,4 +44,5 @@ Our game shows two caution notifications; neither affects the game or changes/im
 | _e.g. Grass Flowers Pack Free| Unity Asset Store | _free, used for the base coloring of the terrain_ |
 | _e.g. EasyRoads3D Free v3| Unity Asset Store | _free, used for the racing road_ |
 | _e.g. DragonStudio | Unity Asset Store | _free, used for the sound effect when interacting with the boost pad_ |
+| _e.g. i6 German - Free Engine Sound Pack | Unity Asset Store | _free, used for the car sound |
 
