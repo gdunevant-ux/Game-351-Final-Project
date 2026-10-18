@@ -299304,8 +299304,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -307, y: 150}
-  m_SizeDelta: {x: 182.8419, y: 31.119}
+  m_AnchoredPosition: {x: -315.63632, y: 149.56818}
+  m_SizeDelta: {x: 165.5693, y: 30.2553}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &620470823
 GameObject:
@@ -304775,7 +304775,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3623482, y: 1}
+    m_SensorSize: {x: 2.0225303, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -328081,7 +328081,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3623482, y: 1}
+    m_SensorSize: {x: 2.0225303, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -328257,7 +328257,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3623482, y: 1}
+    m_SensorSize: {x: 2.0225303, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -330318,8 +330318,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 0.51}
-  m_AnchoredPosition: {x: -314, y: 197}
-  m_SizeDelta: {x: 182.85, y: 50}
+  m_AnchoredPosition: {x: -329.5454, y: 187.50002}
+  m_SizeDelta: {x: 151.7592, y: 31}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1251273211
 MonoBehaviour:
@@ -337073,8 +337073,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -300, y: 99}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -330.22723, y: 92.95457}
+  m_SizeDelta: {x: 139.5456, y: 37.9091}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1604611434
 MonoBehaviour:
@@ -349999,7 +349999,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3623482, y: 1}
+    m_SensorSize: {x: 2.0225303, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
