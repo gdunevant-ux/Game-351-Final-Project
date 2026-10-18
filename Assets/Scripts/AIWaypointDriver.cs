@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 public class AIWaypointDriver : MonoBehaviour
@@ -146,4 +145,3 @@ public class AIWaypointDriver : MonoBehaviour
         rb.MovePosition(rb.position + movement);
     }
 }
-

@@ -304775,7 +304775,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0225303, y: 1}
+    m_SensorSize: {x: 1.7074829, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -328081,7 +328081,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0225303, y: 1}
+    m_SensorSize: {x: 1.7074829, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -328257,7 +328257,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0225303, y: 1}
+    m_SensorSize: {x: 1.7074829, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -349142,6 +349142,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3374474453900846415, guid: e9be6b9d71ce20345b55b654f6eca5d9, type: 3}
+      propertyPath: m_Drag
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6948587442945639655, guid: e9be6b9d71ce20345b55b654f6eca5d9, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -349209,11 +349213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 961341becd79b4a0aa239634fd19b56a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 1524772822}
-  - {fileID: 1372706523}
-  - {fileID: 1135035602}
-  - {fileID: 2031838157}
+  waypoints: []
   playerCar: {fileID: 1234440007}
   raceResultsUI: {fileID: 1555764644}
   generatedWaypointContainer: {fileID: 792644818}
@@ -349999,7 +349999,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0225303, y: 1}
+    m_SensorSize: {x: 1.7074829, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

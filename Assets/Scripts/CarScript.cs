@@ -36,7 +36,6 @@ public class CarScript : MonoBehaviour
         float move = Input.GetAxis("Vertical");
         float turn = Input.GetAxis("Horizontal");
 
-
         if (engineAudio != null)
         {
             bool isMoving =
@@ -61,9 +60,7 @@ public class CarScript : MonoBehaviour
             }
         }
 
-
         transform.Translate(Vector3.forward * move * moveSpeed * Time.deltaTime);
-
 
         if (Mathf.Abs(move) > 0.01f)
         {
