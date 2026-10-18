@@ -12,6 +12,7 @@ public class CameraToggle : MonoBehaviour
 
     void Start()
     {
+        // starts with the third person cam
         thirdPerson.Priority = 10;
         firstPerson.Priority = 0;
         rearCamera.Priority = 0;
@@ -19,6 +20,7 @@ public class CameraToggle : MonoBehaviour
 
     void Update()
     {
+        // switch between third and first
         if (Input.GetKeyDown(KeyCode.T) && !rearViewActive)
         {
             firstPersonActive = !firstPersonActive;
@@ -35,6 +37,7 @@ public class CameraToggle : MonoBehaviour
             }
         }
 
+        // toggle if the b button is pressed to the rear cam
         if (Input.GetKeyDown(KeyCode.B))
         {
             rearViewActive = !rearViewActive;

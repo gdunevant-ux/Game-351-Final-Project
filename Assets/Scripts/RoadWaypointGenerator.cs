@@ -1,51 +1,58 @@
-
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class RoadWaypointGenerator : MonoBehaviour
 {
+    // road object to generate waypoints from
     public GameObject roadObject;
+
+    // distance between waypoints
     public float spacing = 10f;
+
+    // height above the road
     public float heightOffset = 0.5f;
 
     [ContextMenu("Generate Test Waypoints")]
     public void GenerateTestWaypoints()
     {
+        // stop if no road is assigned
         if (roadObject == null)
         {
-            Debug.LogError("Assign road_0001 first!");
             return;
         }
 
+        // get the road mesh
         MeshFilter filter = roadObject.GetComponent<MeshFilter>();
 
+        // stop if the mesh is missing
         if (filter == null || filter.sharedMesh == null)
         {
-            Debug.LogError("Road mesh not found!");
             return;
         }
 
         Vector3[] vertices;
 
+        // get the mesh vertices
         try
         {
             vertices = filter.sharedMesh.vertices;
         }
-        catch (UnityException e)
+        catch (UnityException)
         {
-            Debug.LogError("Cannot read mesh: " + e.Message);
             return;
         }
 
+        // make sure the mesh is valid
         if (vertices.Length < 2 || vertices.Length % 2 != 0)
         {
-            Debug.LogError("Unexpected road mesh structure.");
             return;
         }
 
+        // store the center points of the road
         List<Vector3> centers = new List<Vector3>();
 
-        // Only accept consecutive pairs that resemble road edges.
+        // find the center of each road section
         for (int i = 0; i < vertices.Length; i += 2)
         {
             Vector3 left =
@@ -56,19 +63,16 @@ public class RoadWaypointGenerator : MonoBehaviour
 
             float width = Vector3.Distance(left, right);
 
+            // stop if the road width is unexpected
             if (width < 7f || width > 11f)
             {
-                Debug.LogWarning(
-                    "Unexpected vertex pair width at index " + i +
-                    ": " + width
-                );
                 return;
             }
 
             centers.Add((left + right) * 0.5f);
         }
 
-        // Check that centers follow a continuous route.
+        // check that the road is continuous
         for (int i = 1; i < centers.Count; i++)
         {
             float distance = Vector3.Distance(
@@ -77,14 +81,11 @@ public class RoadWaypointGenerator : MonoBehaviour
 
             if (distance > 15f)
             {
-                Debug.LogWarning(
-                    "Road vertex order is discontinuous at " + i +
-                    ". No waypoints generated."
-                );
                 return;
             }
         }
 
+        // create a parent object for the waypoints
         GameObject container =
             new GameObject("Generated AI Waypoints TEST");
 
@@ -92,6 +93,7 @@ public class RoadWaypointGenerator : MonoBehaviour
         Vector3 previous = centers[0];
         int created = 0;
 
+        // create waypoints along the road
         for (int i = 0; i < centers.Count; i++)
         {
             if (i > 0)
@@ -107,10 +109,12 @@ public class RoadWaypointGenerator : MonoBehaviour
                     "Auto Waypoint " + (created + 1)
                 );
 
+                // parent the waypoint
                 waypoint.transform.SetParent(
                     container.transform
                 );
 
+                // place the waypoint above the road
                 waypoint.transform.position =
                     centers[i] + Vector3.up * heightOffset;
 
@@ -120,10 +124,5 @@ public class RoadWaypointGenerator : MonoBehaviour
 
             previous = centers[i];
         }
-
-        Debug.Log(
-            "Generated " + created +
-            " test waypoints. Inspect them before using!"
-        );
     }
 }

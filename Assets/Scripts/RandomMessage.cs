@@ -5,8 +5,9 @@ using TMPro;
 
 public class RandomMessage : MonoBehaviour
 {
+    //text used to show messages
     public TextMeshProUGUI messageText;
-
+    //lists of random messages
     public string[] messages =
     {
         "Welcome to the track!",
@@ -30,9 +31,11 @@ public class RandomMessage : MonoBehaviour
         "Keep those tires on the road!"
     };
 
+    //duration od bessage and time between
     public float messageDuration = 4f;
     public float timeBetweenMessages = 12f;
 
+    //tracks the messages time, and also stores last message
     private float timer = 0f;
     private int lastMessage = -1;
 
@@ -43,8 +46,10 @@ public class RandomMessage : MonoBehaviour
 
     void Update()
     {
+        //update the timer
         timer += Time.deltaTime;
 
+        //show message when timer ends
         if (timer >= timeBetweenMessages)
         {
             ShowRandomMessage();
@@ -56,6 +61,7 @@ public class RandomMessage : MonoBehaviour
     {
         int randomIndex;
 
+        //insure no repeats with messages until all are played
         do
         {
             randomIndex = Random.Range(0, messages.Length);
