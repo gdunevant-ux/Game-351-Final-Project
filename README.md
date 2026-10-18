@@ -10,9 +10,6 @@ Within this project, we combined our efforts to make a functioning game in Unity
 | Felix [Last Name] | GitHub: TBD | Scripting & OOP, Animation & Motion, USer Interface & HUD|
 | Celaeriste / Aeris Ross | github.com/aerisross0607 | Physics & Particles, Scriptng & OOP, Audio & Game Mechanics|
 
-- Greyson Dunevant: Created the Terrain, Tree prefab, cloud prefab, and animation, created the 
-- Felix:
-- Celaeriste / Aeris Ross:
 ## How To Play
 - W and Up arrow key: move forward
 - A and Left arrow key: move left
