@@ -1,5 +1,5 @@
 # The Fastest
-
+The story follows the player, a huge racing fan; ever since they were young, they've loved it. After a lot of time getting into the racing world, they've done it! With a car on the track and a coach ready to assist, the time has come to race and hopefully win.
 ## Overview
 Within this project, we combined our efforts to make a functioning game in Unity. The game includes a competitor car and forces the player to use shortcuts and boosts to win.
 
