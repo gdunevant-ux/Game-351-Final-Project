@@ -40,7 +40,7 @@ public class AIWaypointDriver : MonoBehaviour
             if (generatedWaypointContainer == null ||
                 generatedWaypointContainer.childCount == 0)
             {
-                Debug.LogError("Generated route is missing!");
+                
                 enabled = false;
                 return;
             }
@@ -54,13 +54,13 @@ public class AIWaypointDriver : MonoBehaviour
                     generatedWaypointContainer.GetChild(i);
             }
 
-            Debug.Log("AI loaded " + count + " waypoints.");
+            
         }
 
         if (activeWaypoints == null ||
             activeWaypoints.Length == 0)
         {
-            Debug.LogError("No AI waypoints assigned!");
+            
             enabled = false;
         }
     }
@@ -103,7 +103,7 @@ public class AIWaypointDriver : MonoBehaviour
                     rb.velocity = Vector3.zero;
                     rb.angularVelocity = Vector3.zero;
 
-                    Debug.Log("AI finished both route passes!");
+                    
 
                     if (raceResultsUI != null)
                     {
@@ -121,7 +121,7 @@ public class AIWaypointDriver : MonoBehaviour
                     
                     currentWaypoint = 0;
 
-                    Debug.Log("AI starting lap 2!");
+                    
                 }
             }
 
